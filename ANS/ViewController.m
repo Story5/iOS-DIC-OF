@@ -38,9 +38,10 @@
 - (IBAction)AppleNativeShare:(id)sender {
     NSString *name = self.file;
     NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:name ofType:name]];
-//    NSURL *url = [[NSBundle mainBundle] URLForResource:name withExtension:name];
+    NSString *path = [self save:url];
     NSLog(@"%@",url);
-    [self dic:url];
+    NSURL *a_url = [NSURL fileURLWithPath:path];
+    [self dic:a_url];
 }
 
 - (void)dic:(NSURL *)url {
@@ -53,6 +54,22 @@
     
     //    [self presentPreview];
 }
+
+- (NSString *)save:(NSURL *)url {
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    NSString *path = [self dataFilePath:[NSString stringWithFormat:@"%@.%@",self.file,self.file]];
+    NSLog(@"path:%@",path);
+    [data writeToFile:path atomically:YES];
+    return path;
+}
+
+-(NSString *)dataFilePath:(NSString *)fileName
+{
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSLog(@"%@",path);
+    NSString *filePath = [path stringByAppendingPathComponent:fileName];
+    return filePath;
+};
 
 #pragma mark -
 #pragma mark private

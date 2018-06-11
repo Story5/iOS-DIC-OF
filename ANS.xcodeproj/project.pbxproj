@@ -30,6 +30,7 @@
 		751C4E5B20CA76A7003174CC /* Properties.plist in Resources */ = {isa = PBXBuildFile; fileRef = 751C4E4A20CA76A7003174CC /* Properties.plist */; };
 		751C4E5C20CA76A7003174CC /* key.key in Resources */ = {isa = PBXBuildFile; fileRef = 751C4E4B20CA76A7003174CC /* key.key */; };
 		751C4E5D20CA76A7003174CC /* numbers.numbers in Resources */ = {isa = PBXBuildFile; fileRef = 751C4E4C20CA76A7003174CC /* numbers.numbers */; };
+		751C4E9120CB84E3003174CC /* QuickLook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 751C4E9020CB84E3003174CC /* QuickLook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		751C4E4A20CA76A7003174CC /* Properties.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Properties.plist; sourceTree = "<group>"; };
 		751C4E4B20CA76A7003174CC /* key.key */ = {isa = PBXFileReference; lastKnownFileType = file; path = key.key; sourceTree = "<group>"; };
 		751C4E4C20CA76A7003174CC /* numbers.numbers */ = {isa = PBXFileReference; lastKnownFileType = file; path = numbers.numbers; sourceTree = "<group>"; };
+		751C4E9020CB84E3003174CC /* QuickLook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLook.framework; path = System/Library/Frameworks/QuickLook.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				751C4E9120CB84E3003174CC /* QuickLook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +81,7 @@
 			children = (
 				751C4E1820CA6F7C003174CC /* ANS */,
 				751C4E1720CA6F7C003174CC /* Products */,
+				751C4E8F20CB84E3003174CC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -192,6 +196,14 @@
 				751C4E4A20CA76A7003174CC /* Properties.plist */,
 			);
 			path = Metadata;
+			sourceTree = "<group>";
+		};
+		751C4E8F20CB84E3003174CC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				751C4E9020CB84E3003174CC /* QuickLook.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
